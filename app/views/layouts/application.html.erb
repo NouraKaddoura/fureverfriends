@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FurEver</title>
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="bg">
+  
+
+
+    <% if logged_in? %>
+      <%= link_to "Logout", logout_path, {method: "DELETE"} %>
+    <% else %>
+      <%= link_to "Login", new_session_path %>
+    <% end %>
+    <%= render 'partials/nav' %>
+
+  <div class="container">
+    <div class="row">
+      <%= yield %>
+    </div>
+  </div>
+
+ 
+
+
+
+
+    <%= params %>
+
+
+  </body>
+</html>

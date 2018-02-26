@@ -1,0 +1,20 @@
+<h1>Fur-Ever Friends!</hi>
+<div class="all">
+<% @pets.each do |p| %>
+
+    <div class="card" style="width: 18rem;">
+        <%= image_tag(p.image_url, class: "card-img-top") %>
+        <div class="card-body">
+            <h5 class="card-title"><%= p.species %></h5>
+            <p class="card-text"><%= p.breed %></p>
+            <%= link_to "Show", "/pets/#{p.id}", class: "btn btn-primary" %>
+        </div>
+    </div>
+
+
+<% end %>
+</div>
+<br>
+<%= link_to("New", "/", class: "btn btn-primary") %>
+
+
