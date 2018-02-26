@@ -19,9 +19,10 @@ class PetsController < ApplicationController
     @pet.breed = params[:pet][:breed]
     @pet.gender = params[:pet][:gender]
     @pet.age = params[:pet][:age]
-    @pet.location = params[:pet][:age]
+    @pet.location = params[:pet][:location]
     @pet.image_url = params[:pet][:image_url]
     @pet.save
+    redirect_to "/"
 
 
   end
@@ -33,5 +34,10 @@ class PetsController < ApplicationController
   end
 
   def destroy
+    @pet = Pet.find(params[:id])
+    @pet.destroy
+    redirect_to "/pets"
   end
+
+  
 end
