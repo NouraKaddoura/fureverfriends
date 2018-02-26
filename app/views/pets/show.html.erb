@@ -5,5 +5,10 @@
 <li>Age: <%= @pet.age %></li>
 <li>Gender: <%= @pet.gender %></li>
 <li>Location: <%= @pet.location %></li>
-
 </ul>
+
+ <ul>
+    <li><%= link_to("Edit","/pets/#{@pet.id}/edit") %></li>
+    <li><%= link_to("Back", "/pets") %></li>
+    <li><%= link_to("Adopt", "/pets/#{@pet.id}", {method: 'delete', data: {confirm:"Are you sure?"}}) %></li>
+  </ul>
