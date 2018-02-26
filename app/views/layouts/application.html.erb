@@ -12,15 +12,6 @@
   
 
 
-    <% if logged_in? %>
-      <%= link_to "Logout", logout_path, {method: "DELETE"} %>
-    <% else %>
-      <%= link_to "Login", new_session_path %>
-    <% end %>
-
-    <% unless logged_in? %>
-    <%= link_to "Sign Up", new_user_path %>
-    <% end %>
  
     <%= render 'partials/nav' %>
 
@@ -35,7 +26,7 @@
 
 
 
-    <%= params %>
+
 
 
   </body>

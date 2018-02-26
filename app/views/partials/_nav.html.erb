@@ -10,7 +10,16 @@
       <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="/pets/new">List a New Pet</a>
       <a class="nav-item nav-link" href="/users">Current Users</a>
-     
+      <a class ="nav-item nav-link">
+        <% if logged_in? %>
+          <%= link_to "Logout", logout_path, {method: "DELETE"} %>
+        <% else %>
+          <%= link_to "Login", new_session_path %>
+        <% end %> </a>
+      <a class ="nav-item nav-link">
+        <% unless logged_in? %>
+          <%= link_to "Sign Up", new_user_path %>
+      <% end %></a>
     </div>
   </div>
 </nav>
