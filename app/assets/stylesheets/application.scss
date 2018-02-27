@@ -13,15 +13,13 @@
  *= require_tree .
  *= require_self
  */
-.mission{
-
-}
 
 .bg {
  background-image: url(http://jllsly.com/wallpapers/kitten-and-puppy-wallpapers-hd-resolution-Is-Cool-Wallpapers.jpg);
  background-repeat: no-repeat;
  background-attachment: fixed;
  background-size: 100%;
+
 }
  .card {
     display: inline-block;
@@ -40,4 +38,18 @@ p {
 
 h1 {
     text-align: center;
+}
+
+.mission, .current_pets{
+   
+    background: #ffff;
+    opacity: .6;
+    font-size: 28px;
+    font-family: 'Josefin Sans', sans-serif;
+     
+}
+.mission { text-align: center;}
+
+.title {font-family: 'Carter One', cursive;
+    font-size: 50px;
 }
