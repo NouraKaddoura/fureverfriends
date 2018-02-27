@@ -1,4 +1,5 @@
 class PetsController < ApplicationController
+  
   def index
     @pets = Pet.all
     
@@ -16,12 +17,14 @@ class PetsController < ApplicationController
   def create
  
     @pet = current_user.pets.new
+    @pet.name = params[:pet][:name]
     @pet.species = params[:pet][:species]
     @pet.breed = params[:pet][:breed]
     @pet.gender = params[:pet][:gender]
     @pet.age = params[:pet][:age]
     @pet.location = params[:pet][:location]
     @pet.image_url = params[:pet][:image_url]
+    @pet.bio = params[:pet][:bio]
     @pet.save
     redirect_to "/"
 
@@ -35,12 +38,14 @@ class PetsController < ApplicationController
 
   def update
     @pet = Pet.find(params[:id])
+    @pet.name = params[:pet][:name]
     @pet.species = params[:pet][:species]
     @pet.breed = params[:pet][:breed]
     @pet.gender = params[:pet][:gender]
     @pet.age = params[:pet][:age]
     @pet.location = params[:pet][:location]
     @pet.image_url = params[:pet][:image_url]
+    @pet.bio = params[:pet][:bio]
     @pet.save
     redirect_to pets_path
 
@@ -52,5 +57,9 @@ class PetsController < ApplicationController
     redirect_to "/pets"
   end
 
+  private
+  def pet_params
+    params.require(:pet).permit(:name, :species, :breed, :gender, :age, :location, :image_url, :bio)
+  end
   
 end

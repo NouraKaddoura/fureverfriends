@@ -1,10 +1,12 @@
 
 <%= image_tag(@pet.image_url) %>
 <ul class="list-unstyled">
+<li>Name: <%= @pet.name %></li>
 <li><%= @pet.species %> : <%= @pet.breed %></li>
 <li>Age: <%= @pet.age %></li>
 <li>Gender: <%= @pet.gender %></li>
 <li>Location: <%= @pet.location %></li>
+<li>Bio: <%= @pet.bio %></li>
 </ul>
 
  <ul class= "horizontal">
