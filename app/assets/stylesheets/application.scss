@@ -14,12 +14,36 @@
  *= require_self
  */
 
+//  .containershow{
+//     height: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+.mission {
+    margin-bottom: 300px;
+}
+.containershow {
+    background: rgba(255,255,255,0.9)
+    
+}
+
+.containershow img {
+    display: inline-block;
+    
+}
+
 img {
     max-height: 400px;
    
 }
+
+.horizontal {
+    padding: 0;
+}
  ul.horizontal li {
-    display:inline;
+    display: inline;
+    
 }
 
 .bg {
@@ -60,4 +84,9 @@ h1 {
 
 .title {font-family: 'Carter One', cursive;
     font-size: 50px;
+}
+
+.details {
+    margin-left: 10px;
+    display: inline-block;
 }
