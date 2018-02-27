@@ -20,11 +20,22 @@
 //     justify-content: center;
 //     align-items: center;
 // }
+
+h1 {
+    font-family: 'Carter One', cursive;
+    color: black;
+}
+.col-md-6 {
+    background: rgba(255,255,255,.7)
+}
+.usersindex {
+    background: rgba(255,255,255,.5)
+}
 .mission {
     margin-bottom: 300px;
 }
 .containershow {
-    background: rgba(255,255,255,0.9)
+    background: rgba(255,255,255,0.5)
     
 }
 
@@ -36,6 +47,9 @@
 img {
     max-height: 400px;
    
+}
+.logo{
+    width: 80px;
 }
 
 .horizontal {
