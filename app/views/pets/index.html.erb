@@ -16,8 +16,7 @@
                     <div class="card-body">
                         <h5 class="card-title"><%= p.species %></h5>
                         <p class="card-text"><%= p.breed %></p>
-                        <%= link_to "Show", "/pets/#{p.id}", class: "btn btn-primary" %>
-                        <%= link_to("Adopt", "/pets/#{p.id}", {method: 'delete', data: {confirm:"Are you sure?"}}) %> 
+                        <%= link_to "Learn More", "/pets/#{p.id}", class: "btn btn-primary" %>
                     </div>
                 </div>
             </div>

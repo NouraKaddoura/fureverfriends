@@ -1,14 +1,19 @@
 
 <%= image_tag(@pet.image_url) %>
-<ul>
+<ul class="list-unstyled">
 <li><%= @pet.species %> : <%= @pet.breed %></li>
 <li>Age: <%= @pet.age %></li>
 <li>Gender: <%= @pet.gender %></li>
 <li>Location: <%= @pet.location %></li>
 </ul>
 
- <ul>
-    <li><%= link_to("Edit","/pets/#{@pet.id}/edit") %></li>
-    <li><%= link_to("Back", "/pets") %></li>
-    <li><%= link_to("Adopt", "/pets/#{@pet.id}", {method: 'delete', data: {confirm:"Are you sure?"}}) %></li>
+ <ul class= "horizontal">
+  <% if current_user && @pet.user_id == current_user.id %> 
+    <li><%= link_to "Edit","/pets/#{@pet.id}/edit", class: "btn btn-primary" %></li>
+  <% end %> 
+    <li><%= link_to "Back", "/pets", class: "btn btn-primary" %></li>
+ <% if !!current_user %>
+    <li><%= link_to "Adopted?", "/pets/#{@pet.id}", {class: "btn btn-primary", method: 'delete', data: {confirm:"Are you sure?"}} %></li>
+    <% end %>
   </ul>
+
