@@ -1,9 +1,8 @@
 <h1>List a Pet</h1>
 <%= form_for(@pet, url: "/pets" ) do |f| %>
-<%= f.text_field( :species, {placeholder: "Species"}) %>
-
+<%= f.select(:species, ["Species","Dog", "Cat", "Bird","Other"]) %>
 <%= f.text_field( :breed, {placeholder: "Breed"}) %>
-<%= f.text_field( :gender, {placeholder: "Gender"}) %>
+<%= f.select(:gender, ["Gender", "M", "F"]) %>
 <%= f.text_field( :age, {placeholder: "Age"}) %>
 <%= f.text_field( :location, {placeholder: "Location"}) %>
 <%= f.text_field( :image_url, {placeholder: "Image Url"}) %>

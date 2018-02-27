@@ -1,23 +1,27 @@
 <h1>Fur-Ever Friends!</h1>
+<br>
+<p>Our mission is to save animals of all sizes and all breeds by placing them into loving, forever homes.</p> 
 
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h3 class="mission">Current Pets Waiting for their Fur-ever Homes:</h3>
 <div class="all">
-<% @pets.each do |p| %>
-
-    <div class="card" style="width: 18rem;">
-        <%= image_tag(p.image_url, class: "card-img-top") %>
-        <div class="card-body">
-            <h5 class="card-title"><%= p.species %></h5>
-            <p class="card-text"><%= p.breed %></p>
-            <%= link_to "Show", "/pets/#{p.id}", class: "btn btn-primary" %>
-            <%= link_to("Adopt", "/pets/#{p.id}", {method: 'delete', data: {confirm:"Are you sure?"}}) %> 
-        </div>
+<% @pets.each_slice(4) do |r| %>
+    <div class="row">
+        <% r.each do |p| %>
+            <div class="col-md-3">
+                <div class="card" style="">
+                    <%= image_tag(p.image_url, class: "card-img-top") %>
+                    <div class="card-body">
+                        <h5 class="card-title"><%= p.species %></h5>
+                        <p class="card-text"><%= p.breed %></p>
+                        <%= link_to "Show", "/pets/#{p.id}", class: "btn btn-primary" %>
+                        <%= link_to("Adopt", "/pets/#{p.id}", {method: 'delete', data: {confirm:"Are you sure?"}}) %> 
+                    </div>
+                </div>
+            </div>
+        <% end %>
     </div>
-
 
 <% end %>
 </div>
-
-
-
 

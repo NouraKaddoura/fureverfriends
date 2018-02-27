@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
+.mission{
 
+}
 
 .bg {
  background-image: url(http://jllsly.com/wallpapers/kitten-and-puppy-wallpapers-hd-resolution-Is-Cool-Wallpapers.jpg);
@@ -25,16 +27,15 @@
     display: inline-block;
     margin: 5px;
     vertical-align: top;
-    height: 350px;
-   
+    width: 100%;
 }
 
 p {
     font-size: 25px;
 }
 
-img {
-    max-height: 200px;
+.card img {
+    width: 100%;
 }
 
 h1 {

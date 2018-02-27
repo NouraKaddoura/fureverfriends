@@ -1,6 +1,7 @@
 class PetsController < ApplicationController
   def index
     @pets = Pet.all
+
     
   end
 
@@ -29,9 +30,20 @@ class PetsController < ApplicationController
 
   def edit
     @pet = Pet.find(params[:id])
+    
   end
 
   def update
+    @pet = Pet.find(params[:id])
+    @pet.species = params[:pet][:species]
+    @pet.breed = params[:pet][:breed]
+    @pet.gender = params[:pet][:gender]
+    @pet.age = params[:pet][:age]
+    @pet.location = params[:pet][:location]
+    @pet.image_url = params[:pet][:image_url]
+    @pet.save
+    redirect_to pets_path
+
   end
 
   def destroy

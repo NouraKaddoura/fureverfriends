@@ -1,10 +1,9 @@
 <h1>Edit Pet</h1>
-<p>Find me in app/views/pets/edit.html.erb</p>
-<h1>List a Pet</h1>
+
 <%= form_for(@pet) do |f| %>
-<%= f.text_field( :species, {placeholder: "Species"}) %>
+<%= f.select(:species, ["Species","Dog", "Cat", "Bird","Other"]) %>
 <%= f.text_field( :breed, {placeholder: "Breed"}) %>
-<%= f.text_field( :gender, {placeholder: "Gender"}) %>
+<%= f.select(:gender, ["Gender", "M", "F"]) %>
 <%= f.text_field( :age, {placeholder: "Age"}) %>
 <%= f.text_field( :location, {placeholder: "Location"}) %>
 <%= f.text_field( :image_url, {placeholder: "Image Url"}) %>
