@@ -1,4 +1,8 @@
-
+<ul class="list-unstyled">
+ <% if !!current_user %>
+ <li><%= link_to "Email Foster Home", "mailto:someone@example.com?Subject=Hello%20again", {class: "btn btn-primary", target:"_top"} %> </li>
+ </ul>
+ <% end %>
 <%= image_tag(@pet.image_url) %>
 <ul class="list-unstyled">
 <li>Name: <%= @pet.name %></li>
@@ -9,13 +13,17 @@
 <li>Bio: <%= @pet.bio %></li>
 </ul>
 
- <ul class= "horizontal">
+
+
+ <ul class="horizontal">
+
   <% if current_user && @pet.user_id == current_user.id %> 
     <li><%= link_to "Edit","/pets/#{@pet.id}/edit", class: "btn btn-primary" %></li>
   <% end %> 
     <li><%= link_to "Back", "/pets", class: "btn btn-primary" %></li>
- <% if !!current_user %>
+ <% if !!current_user && @pet.user_id == current_user.id %>
     <li><%= link_to "Adopted?", "/pets/#{@pet.id}", {class: "btn btn-primary", method: 'delete', data: {confirm:"Are you sure?"}} %></li>
     <% end %>
+   
   </ul>
 

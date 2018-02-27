@@ -14,7 +14,10 @@
  *= require_self
  */
 
-
+img {
+    max-height: 400px;
+   
+}
  ul.horizontal li {
     display:inline;
 }

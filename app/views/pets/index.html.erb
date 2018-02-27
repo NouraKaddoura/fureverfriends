@@ -14,9 +14,10 @@
                 <div class="card" style="">
                     <%= image_tag(p.image_url, class: "card-img-top") %>
                     <div class="card-body">
-                        <h5 class="card-title"><%= p.species %></h5>
+                        <h5 class="card-title"><%= p.name %> : <%= p.age %></h5>
                         <p class="card-text"><%= p.breed %></p>
                         <%= link_to "Learn More", "/pets/#{p.id}", class: "btn btn-primary" %>
+                    
                     </div>
                 </div>
             </div>
