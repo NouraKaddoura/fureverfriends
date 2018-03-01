@@ -1,6 +1,7 @@
 
 
 # Fur-Ever Friends
+![website](/app/assets/images/homescreen.png)
 
 (Add image)
 
