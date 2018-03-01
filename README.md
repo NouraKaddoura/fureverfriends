@@ -3,7 +3,6 @@
 # Fur-Ever Friends
 ![website](/app/assets/images/homescreen.png)
 
-(Add image)
 
 This app is built to help connect people who are looking to adopt a pet into a forever home, and also for people who are currently looking for forever homes for the animals in their care. 
 [Link to Fur-Ever Friends](https://stormy-harbor-34048.herokuapp.com/)
