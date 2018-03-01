@@ -23,8 +23,16 @@
 
 
 
-.userprofile {
-    
+.card-image-box{
+    height: 200px;
+}
+.card-img-top{
+height: 100%;
+object-fit: cover;
+}
+.card-text {
+    height: 75px;
+    overflow: auto;
 }
 
 h1 {

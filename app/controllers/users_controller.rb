@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :authorize, only: [:show]
+  before_action :authorize_edit, only: [:edit]
+ 
   
   def index
     @users = User.all
@@ -28,6 +30,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+   
   end
 
   def update
@@ -45,6 +48,14 @@ class UsersController < ApplicationController
     @user.destroy
     redirect_to "/pets"
   end
+
+  def authorize_edit
+    @user = User.find(params[:id])
+    if @user != current_user
+      redirect_to "/pets"
+    end
+  end
+
 
   private
   def user_params

@@ -1,5 +1,6 @@
 class PetsController < ApplicationController
-  
+  before_action :authorize_edit, only: [:edit]
+
   def index
     @pets = Pet.all
     
@@ -33,6 +34,9 @@ class PetsController < ApplicationController
 
   def edit
     @pet = Pet.find(params[:id])
+    if !@user == current_user
+      redirect_to pets_path
+    end
     
   end
 
@@ -55,6 +59,13 @@ class PetsController < ApplicationController
     @pet = Pet.find(params[:id])
     @pet.destroy
     redirect_to "/pets"
+  end
+
+  def authorize_edit
+    @pet = Pet.find(params[:id])
+    if @pet.user != current_user
+      redirect_to "/pets"
+    end
   end
 
   private
