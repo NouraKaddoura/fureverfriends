@@ -10,6 +10,7 @@
       <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="/users">Current Users</a>
         <% if logged_in? %>
+          <%= link_to "User Page", user_path(current_user.id), {class: "nav-item nav-link"} %>
           <%= link_to "Logout", logout_path, {method: "DELETE", class: "nav-item nav-link"} %>
           <%= link_to "List a New Pet", new_pet_path, {class: "nav-item nav-link"} %>
         <% else %>

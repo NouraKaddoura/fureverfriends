@@ -31,9 +31,19 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user = User.find(params[:id])
+    @user.username = params[:user][:username]
+    @user.email = params[:user][:email]
+    @user.password = params[:user][:password]
+    @user.save
+   redirect_to user_path(current_user.id)
+
   end
 
   def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to "/pets"
   end
 
   private

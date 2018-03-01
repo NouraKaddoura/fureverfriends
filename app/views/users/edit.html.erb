@@ -3,7 +3,7 @@
 <div class="row animated fadeInDown">
   <div class="col-md-6 offset-md-3">
     <h1>Edit Account</h1>
-    <%= form_for user_path do |f| %>
+    <%= form_for @user do |f| %>
       <div class="form-group">
         <label>Username</label>
         <%= f.text_field :username, class: "form-control", placeholder: "Username" %>

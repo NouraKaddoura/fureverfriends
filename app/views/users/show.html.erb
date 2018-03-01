@@ -1,5 +1,10 @@
 <h1>Welcome Back, <%= @user.username %> !</h1>
-<center><%= link_to "Start Searching Friends", "/", class: "btn btn-secondary" %>
-<%= link_to "Edit Account", "/users/#{@user.id}/edit", class: "btn btn-secondary" %></center>
+<center>
+<ul class="horizontal">
+<% if current_user == current_user %>
+<li><%= link_to "Start Searching Friends", "/", class: "btn btn-secondary" %></li>
+<li><%= link_to "Edit Account", "/users/#{@user.id}/edit", class: "btn btn-secondary" %></li>
+<li><%= link_to "Delete Account", "/users/#{@user.id}",{class: "btn btn-secondary", method: 'delete', data: {confirm:"Are You Sure?"}} %></li>
+<% end %>
 
-
+</center>
