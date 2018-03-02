@@ -34,7 +34,7 @@ Planning for this app started with focusing on the first two main models and the
 
     * Open Terminal 
 
-    * Open the project directory and type: bundle install       *(This installs gems you need for the app)
+    * Open the project directory and type: bundle install      -(This installs gems you need for the app)
 
     * Make sure you have Postgres, if not download from the Postgres website. 
     
@@ -43,13 +43,13 @@ Planning for this app started with focusing on the first two main models and the
     * Open a new terminal tab and make sure you are not in Postgres or have a rails server open in that tab.
 
     * Type: rails run rake db:migrate 
-        *(this will migrate the app's tables)
+        -(this will migrate the app's tables)
 
     * Type: rails server. 
-        *(This will initiate your server)
+        -(This will initiate your server)
 
     * Open a new tab on your browser and type in localhost:3000
-        * (If you get an error or a different application, make sure you do not have a previous local server running in a separate terminal tab.)
+        -(If you get an error or a different application, make sure you do not have a previous local server running in a separate terminal tab.)
 
     * Start using/updating the app to help pets and people in your area!
 
