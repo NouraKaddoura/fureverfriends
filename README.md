@@ -34,7 +34,7 @@ Planning for this app started with focusing on the first two main models and the
 
     * Open Terminal 
 
-    * Open the project directory and type: bundle install       * (This installs gems you need for the app)
+    * Open the project directory and type: bundle install       *(This installs gems you need for the app)
 
     * Make sure you have Postgres, if not download from the Postgres website. 
     
